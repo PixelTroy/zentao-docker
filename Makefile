@@ -181,3 +181,6 @@ clean: stop ## 停服务
 
 logs: ## 查看运行日志
 	docker-compose -f docker-compose.yml logs
+	
+make build-CRCB: ##构建常熟农商行镜像
+	docker build --build-arg VERSION=$(MAX_VER) -t hub.qucheng.com/app/$(APP_NAME):$(MAX_VER)-$(BUILD_DATE) -f Dockerfile.CRCB
