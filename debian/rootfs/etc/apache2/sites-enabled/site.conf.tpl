@@ -11,3 +11,11 @@
     ErrorLog /dev/stderr
     CustomLog /dev/stdout combined
 </VirtualHost>
+
+# setting for h5
+Alias /h5 "/apps/zentao/h5"
+<Directory "/apps/zentao/h5">
+  Options FollowSymLinks
+  AllowOverride All
+  Require all granted
+</Directory>
